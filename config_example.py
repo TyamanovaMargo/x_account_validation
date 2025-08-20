@@ -1,5 +1,6 @@
 import os
 from dotenv import load_dotenv
+
 load_dotenv()
 
 class Config:
@@ -10,3 +11,12 @@ class Config:
     VALIDATION_DELAY_MIN = 1.5
     VALIDATION_DELAY_MAX = 3.5
     MAX_SNAPSHOT_WAIT = 600
+    
+    # NEW: Enhanced Audio sampling configuration
+    MIN_SAMPLE_DURATION = 30    # Minimum 30 seconds
+    MAX_SAMPLE_DURATION = 3600  # Maximum 1 hour (3600 seconds)
+    DEFAULT_SAMPLE_DURATION = 3600  # Default to max duration
+    
+    # Audio quality settings
+    AUDIO_QUALITY_LEVELS = ["192", "128", "96", "64"]  # Quality fallback options
+    EXTRACTION_TIMEOUT_BASE = 300  # Base timeout in seconds
